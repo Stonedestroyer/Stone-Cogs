@@ -1,7 +1,7 @@
 # Stone-Cogs
 Random Cogs for Red Bot V3.
 
-Installation Instructions - Tell the user how to download your repo and access your cogs. Any additional hurdles to using your creations should be added here as well.
+# Installation
 
 Replace [p] with your prefix and [cogname] with the cog you wanna install.
 
@@ -9,14 +9,13 @@ Replace [p] with your prefix and [cogname] with the cog you wanna install.
 2. [p]repo add Stone-Cogs https://github.com/Stonedestroyer/Stone-Cogs.git
 3. [p]cog install Stone-Cogs [cogname]
 
-Requirements  
+# Requirements  
 
-Credits  
+# Credits  
 
-Contact
-
+# Contact  
 #testing channel in Red-Bot.  
 Type `33957150`.
 
-License  
+# License  
 GPL3. 
