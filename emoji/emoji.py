@@ -5,7 +5,6 @@ from redbot.core import commands
 
 log = logging.getLogger("red.Stone-Cogs.Emoji")
 
-__VERSION__ = 1.0.1
 
 class Emoji(commands.Cog):
     """Emoji Commands"""
