@@ -13,7 +13,7 @@ Requirements
 
 Credits
 
-Contact - How to contact you about bugs, issues, or suggestions.
+Contact - How to contact you about bugs, issues, or suggestions. 
 #testing channel in Red-Bot. 
 Type `33957150`.
 
