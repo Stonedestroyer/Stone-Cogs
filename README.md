@@ -9,13 +9,14 @@ Replace [p] with your prefix and [cogname] with the cog you wanna install.
 2. [p]repo add Stone-Cogs https://github.com/Stonedestroyer/Stone-Cogs.git
 3. [p]cog install Stone-Cogs [cogname]
 
-Requirements
+Requirements  
 
-Credits
+Credits  
 
-Contact - How to contact you about bugs, issues, or suggestions. 
-#testing channel in Red-Bot. 
+Contact
+
+#testing channel in Red-Bot.  
 Type `33957150`.
 
-License
+License  
 GPL3. 
