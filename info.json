@@ -1,0 +1,9 @@
+{
+    "name": "Stone-Cogs",
+    "short": "Random cogs.",
+    "description": "Cogs that do stuff.",
+    "install_msg": "Thanks for installing one of my cogs.",
+    "author": [
+        "Stonedestroyer"
+    ]
+}

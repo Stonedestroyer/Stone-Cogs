@@ -1,0 +1,18 @@
+{
+    "name": "Emoji",
+    "short": "Emoji utility commands.",
+    "description": "Manage emojis and commands related to emojis.",
+    "install_msg": "Thank you for installing Emoji. For support questions ask in #testing in RedBot server and the author will show up.",
+    "author": [
+        "Stonedestroyer"
+    ],
+    "required_cogs": {},
+    "requirements": [],
+    "tags": [
+        "utility",
+        "fun"
+    ],
+    "hidden": false,
+    "disabled": false,
+    "type": "COG"
+}
