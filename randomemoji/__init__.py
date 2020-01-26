@@ -1,6 +1,6 @@
-from .randomemoji import Emoji
+from .randomemoji import RandomEmoji
 
 
 def setup(bot):
-    n = Emoji(bot)
+    n = RandomEmoji(bot)
     bot.add_cog(n)

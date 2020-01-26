@@ -9,7 +9,8 @@ log = logging.getLogger("red.Stone-Cogs.RandomEmoji")
 class RandomEmoji(commands.Cog):
     """Emoji Commands"""
 
-    def __init__(self, bot):
+    def __init__(self, bot, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.bot = bot
 
     @commands.command(aliases=['randomemote'])
