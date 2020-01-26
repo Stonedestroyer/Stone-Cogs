@@ -3,10 +3,10 @@ import random
 
 from redbot.core import commands
 
-log = logging.getLogger("red.Stone-Cogs.Emoji")
+log = logging.getLogger("red.Stone-Cogs.RandomEmoji")
 
 
-class Emoji(commands.Cog):
+class RandomEmoji(commands.Cog):
     """Emoji Commands"""
 
     def __init__(self, bot):

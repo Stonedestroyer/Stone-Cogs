@@ -1,4 +1,4 @@
-from .emoji import Emoji
+from .randomemoji import Emoji
 
 
 def setup(bot):
