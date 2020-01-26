@@ -13,7 +13,6 @@ class Emoji(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=['randomemote'])
-    @commands.is_owner()
     async def randomemoji(self, ctx):
         """Posts a random emote from guilds this bot is in"""
         listofemotes = []
