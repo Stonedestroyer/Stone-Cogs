@@ -23,8 +23,10 @@ class RandomEmoji(commands.Cog):
             for emoji in guild.emojis:
                 listofemotes.append(emoji)
         chosen_emote = random.choice(listofemotes)
-        description = f"Emote from {chosen_emote.guild.name} ({chosen_emote.guild.id})"
-        embed = discord.Embed(colour=await ctx.embed_colour(), description=description)
+        description = f"{chosen_emote.guild.id}"
+        embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
+        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n"
+                              f"EID: {chosen_emote.id}")
         embed.set_image(url=chosen_emote.url)
         message = await ctx.send(embed=embed)
         start_adding_reactions(message, ["❌"])
