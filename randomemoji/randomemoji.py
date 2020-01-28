@@ -2,9 +2,7 @@ import logging
 import random
 import discord
 from redbot.core import commands
-from redbot.core.utils.predicates import ReactionPredicate
-from redbot.core.utils.menus import start_adding_reactions
-from redbot.core.utils.menus import menu, DEFAULT_CONTROLS
+from redbot.core.utils.menus import menu
 import contextlib
 import contextvars
 
@@ -28,7 +26,6 @@ class RandomEmoji(commands.Cog):
                 listofemotes.append(emoji)
         emotes.set(listofemotes)
         chosen_emote = random.choice(listofemotes)
-        description = f"{chosen_emote.guild.id}"
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
         embed.set_footer(
             text=f"GID: {chosen_emote.guild.id}\n"
