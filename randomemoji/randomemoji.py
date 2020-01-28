@@ -73,5 +73,6 @@ class RandomEmoji(commands.Cog):
                               f"EID: {chosen_emote.id}")
         embed.set_image(url=chosen_emote.url)
         await message.edit(embed=embed)
+        pages = [embed]
         return await menu(ctx, pages, controls, message=message, page=page, timeout=timeout)
 
