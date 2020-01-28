@@ -9,7 +9,7 @@ import contextlib
 import contextvars
 
 log = logging.getLogger("red.Stone-Cogs.RandomEmoji")
-emotes = contextvars.ContextVar("emotes")
+emotes = contextvars.ContextVar("emotes", default=[])
 
 
 class RandomEmoji(commands.Cog):
@@ -65,7 +65,12 @@ class RandomEmoji(commands.Cog):
         # emote logic
         listofemotes = emotes.get()
         random.shuffle(listofemotes)
-        chosen_emote = listofemotes.pop()
+        if listofemotes:
+            chosen_emote = listofemotes.pop()
+        else:
+            for guild in self.bot.guilds:
+                for emoji in guild.emojis:
+                    listofemotes.append(emoji)
         emotes.set(listofemotes)
 
         # TODO Refresh list when popped
