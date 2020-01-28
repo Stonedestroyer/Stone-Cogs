@@ -71,6 +71,5 @@ class RandomEmoji(commands.Cog):
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
         embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n" f"EID: {chosen_emote.id}")
         embed.set_image(url=chosen_emote.url)
-        await message.edit(embed=embed)
         pages = [embed]
         return await menu(ctx, pages, controls, message=message, page=page, timeout=timeout)
