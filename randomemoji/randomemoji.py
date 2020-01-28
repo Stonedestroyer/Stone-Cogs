@@ -30,7 +30,11 @@ class RandomEmoji(commands.Cog):
         chosen_emote = random.choice(listofemotes)
         description = f"{chosen_emote.guild.id}"
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
-        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n" f"EID: {chosen_emote.id}\n" f"Remaining emotes: {len(emotes.get())}")
+        embed.set_footer(
+            text=f"GID: {chosen_emote.guild.id}\n"
+            f"EID: {chosen_emote.id}\n"
+            f"Remaining emotes: {len(emotes.get())}"
+        )
         embed.set_image(url=chosen_emote.url)
         emote_controls = {"❌": self.close_menu, "🔁": self.refresh_menu}
         await menu(ctx=ctx, pages=[embed], controls=emote_controls, page=0, timeout=30)
@@ -76,7 +80,11 @@ class RandomEmoji(commands.Cog):
         # TODO Refresh list when popped
 
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
-        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n" f"EID: {chosen_emote.id}\n" f"Remaining emotes: {len(emotes.get())}")
+        embed.set_footer(
+            text=f"GID: {chosen_emote.guild.id}\n"
+            f"EID: {chosen_emote.id}\n"
+            f"Remaining emotes: {len(emotes.get())}"
+        )
         embed.set_image(url=chosen_emote.url)
         pages = [embed]
         return await menu(ctx, pages, controls, message=message, page=page, timeout=timeout)
