@@ -12,6 +12,7 @@ Replace [p] with your prefix and [cogname] with the cog you wanna install.
 # Requirements  
 
 # Credits  
+Thanks to Brandjuh for inspiration to randomemoji cog and commission. 
 
 # Contact  
 #testing channel in Red-Bot.  
