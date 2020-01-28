@@ -11,6 +11,7 @@ import contextvars
 log = logging.getLogger("red.Stone-Cogs.RandomEmoji")
 emotes = contextvars.ContextVar("emotes")
 
+
 class RandomEmoji(commands.Cog):
     """Emoji Commands"""
 
@@ -29,34 +30,33 @@ class RandomEmoji(commands.Cog):
         chosen_emote = random.choice(listofemotes)
         description = f"{chosen_emote.guild.id}"
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
-        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n"
-                              f"EID: {chosen_emote.id}")
+        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n" f"EID: {chosen_emote.id}")
         embed.set_image(url=chosen_emote.url)
         emote_controls = {"❌": self.close_menu, "🔁": self.refresh_menu}
         await menu(ctx=ctx, pages=[embed], controls=emote_controls, page=0, timeout=30)
 
     async def close_menu(
-            self,
-            ctx: commands.Context,
-            pages: list,
-            controls: dict,
-            message: discord.Message,
-            page: int,
-            timeout: float,
-            emoji: str,
+        self,
+        ctx: commands.Context,
+        pages: list,
+        controls: dict,
+        message: discord.Message,
+        page: int,
+        timeout: float,
+        emoji: str,
     ):
         with contextlib.suppress(discord.NotFound):
             await message.delete()
 
     async def refresh_menu(
-            self,
-            ctx: commands.Context,
-            pages: list,
-            controls: dict,
-            message: discord.Message,
-            page: int,
-            timeout: float,
-            emoji: str,
+        self,
+        ctx: commands.Context,
+        pages: list,
+        controls: dict,
+        message: discord.Message,
+        page: int,
+        timeout: float,
+        emoji: str,
     ):
         perms = message.channel.permissions_for(ctx.me)
         if perms.manage_messages:  # Can manage messages, so remove react
@@ -69,10 +69,8 @@ class RandomEmoji(commands.Cog):
         emotes.set(listofemotes)
 
         embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
-        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n"
-                              f"EID: {chosen_emote.id}")
+        embed.set_footer(text=f"GID: {chosen_emote.guild.id}\n" f"EID: {chosen_emote.id}")
         embed.set_image(url=chosen_emote.url)
         await message.edit(embed=embed)
         pages = [embed]
         return await menu(ctx, pages, controls, message=message, page=page, timeout=timeout)
-
