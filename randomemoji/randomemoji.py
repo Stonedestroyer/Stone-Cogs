@@ -17,6 +17,10 @@ class RandomEmoji(commands.Cog):
         super().__init__(*args, **kwargs)
         self.bot = bot
 
+    async def red_delete_data_for_user(self, **kwargs):
+        """Nothing to delete."""
+        return
+
     @commands.command(aliases=["randomemote"])
     async def randomemoji(self, ctx):
         """Posts a random emote from guilds this bot is in"""
