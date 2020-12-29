@@ -22,6 +22,7 @@ class RandomEmoji(commands.Cog):
         return
 
     @commands.command(aliases=["randomemote"])
+    @commands.bot_has_permissions(embed_links=True)
     async def randomemoji(self, ctx):
         """Posts a random emote from guilds this bot is in"""
         list_of_emotes = []
