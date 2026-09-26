@@ -81,7 +81,7 @@ class RandomEmoji(commands.Cog):
 
         # TODO Refresh list when popped
 
-        embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.guild.name}")
+        embed = discord.Embed(colour=await ctx.embed_colour(), title=f"{chosen_emote.name}")
         embed.set_footer(
             text=f"GID: {chosen_emote.guild.id}\n"
             f"EID: {chosen_emote.id}\n"
